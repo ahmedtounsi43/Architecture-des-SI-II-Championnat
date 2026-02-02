@@ -2,6 +2,8 @@ package tn.esprit.ds.championnat.entities;
 
 import jakarta.persistence.*;
 
+import java.util.Set;
+
 @Entity
 
 public class championnat {
@@ -15,6 +17,12 @@ public class championnat {
     private String libelleC;
 
     private Integer annee;
+
+    @OneToOne
+    private DetailChampionnat DetailChampionnat;
+
+    @ManyToMany
+    private Set<Course> courses;
 
     // 🔹 Constructeur vide (obligatoire pour JPA)
     public void Championnat() {

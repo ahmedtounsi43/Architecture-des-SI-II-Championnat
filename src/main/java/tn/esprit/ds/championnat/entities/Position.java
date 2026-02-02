@@ -2,6 +2,8 @@ package tn.esprit.ds.championnat.entities;
 
 import jakarta.persistence.*;
 
+import java.util.Set;
+
 @Entity
 public class Position {
     @Id
@@ -10,6 +12,12 @@ public class Position {
 
     private Integer classement;
     private Integer nbPoints;
+
+    @ManyToOne
+    private Course course;
+
+    @ManyToOne
+    private Pilote pilote;
 
     public Position() {}
 

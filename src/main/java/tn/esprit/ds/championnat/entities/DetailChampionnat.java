@@ -11,6 +11,9 @@ public class DetailChampionnat {
     private String code;
     private String description;
 
+    @OneToOne(mappedBy = "DetailChampionnat")
+    private championnat championnat;
+
     // 🔹 Constructeur vide
     public DetailChampionnat() {
     }
