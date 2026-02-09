@@ -6,7 +6,7 @@ import java.util.Set;
 
 @Entity
 
-public class championnat {
+public class Championnat {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_championnat;
@@ -24,18 +24,14 @@ public class championnat {
     @ManyToMany
     private Set<Course> courses;
 
-    // 🔹 Constructeur vide (obligatoire pour JPA)
     public void Championnat() {
     }
 
-    // 🔹 Constructeur avec paramètres
     public void Championnat(Categorie categorie, String libelleC, Integer annee) {
         this.categorie = categorie;
         this.libelleC = libelleC;
         this.annee = annee;
     }
-
-    // 🔹 Getters & Setters (sans getX / getY comme tu préfères 😉)
 
     public Long id_championnat() {
         return id_championnat;

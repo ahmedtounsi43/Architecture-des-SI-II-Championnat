@@ -12,19 +12,16 @@ public class DetailChampionnat {
     private String description;
 
     @OneToOne(mappedBy = "DetailChampionnat")
-    private championnat championnat;
+    private Championnat championnat;
 
-    // 🔹 Constructeur vide
     public DetailChampionnat() {
     }
 
-    // 🔹 Constructeur avec paramètres
     public DetailChampionnat(String code, String description) {
         this.code = code;
         this.description = description;
     }
 
-    // 🔹 Getters & Setters
     public Long idDetailChamp() {
         return idDetailChamp;
     }

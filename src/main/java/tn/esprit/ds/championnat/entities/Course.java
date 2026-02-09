@@ -14,7 +14,7 @@ public class Course {
     private LocalDate dateCourse;
 
     @ManyToMany(mappedBy = "courses")
-    private Set<championnat> championnats;
+    private Set<Championnat> Championnats;
 
     @OneToMany(mappedBy = "course")
     private Set<Position> positions;
